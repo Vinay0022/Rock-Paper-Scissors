@@ -1,4 +1,6 @@
 
+  let player= 0;
+let cpu=0;
 function getComputerChoice() {
   const arr = ["Rock", "Paper", "Scissors"];
   let i = Math.floor(Math.random() * 3);
@@ -10,24 +12,32 @@ function game() {
     console.log(computerSelection);
     const playerSelection = prompt("Enter your option: ");
     playRound(playerSelection, computerSelection);
+  console.log(`The player score is ${player}`);
+  console.log(`The cpu score is ${cpu}`);
   }
+(player>cpu)?console.log("player wins"):console.log("cpu wins");    
 }
 
 function playRound(playerSelection, computerSelection) {
   if (playerSelection.toLowerCase() == computerSelection.toLowerCase()) {
-    return console.log(`You Tie! ${playerSelection} tie with ${computerSelection}`);
+    return;
+    // return console.log(`You Tie! ${playerSelection} tie with ${computerSelection}`);
   }
   else if (playerSelection.toLowerCase() == "rock" && computerSelection.toLowerCase() == "scissors") {
-    return console.log(`You Win! ${playerSelection} beats ${computerSelection}`);
+    return player+=1;
+    // return console.log(`You Win! ${playerSelection} beats ${computerSelection}`);
   }
-  if (playerSelection.toLowerCase() == "paper" && computerSelection.toLowerCase() == "rock") {
-    return console.log(`You Win! ${playerSelection} beats ${computerSelection}`);
+  else if (playerSelection.toLowerCase() == "paper" && computerSelection.toLowerCase() == "rock") {
+     return player+=1;
+    // return console.log(`You Win! ${playerSelection} beats ${computerSelection}`);
   }
-  if (playerSelection.toLowerCase() == "scissors" && computerSelection.toLowerCase() == "paper") {
-    return console.log(`You Win! ${playerSelection} beats ${computerSelection}`);
+  else if (playerSelection.toLowerCase() == "scissors" && computerSelection.toLowerCase() == "paper") {
+   return player+=1;
+    // return console.log(`You Win! ${playerSelection} beats ${computerSelection}`);
   }
   else {
-    return console.log(`You Lose! ${computerSelection} beats ${playerSelection}`);
+return cpu+=1;
+    // return console.log(`You Lose! ${computerSelection} beats ${playerSelection}`);
   }
 
 }
