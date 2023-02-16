@@ -6,6 +6,7 @@ function getComputerChoice() {
   let i = Math.floor(Math.random() * 3);
   return arr[i];
 };
+//game function
 function game() {
   for (let index = 0; index < 5; index++) {
     const computerSelection = getComputerChoice();
@@ -18,6 +19,8 @@ function game() {
 (player>cpu)?console.log("player wins"):console.log("cpu wins");    
 }
 
+
+//function for each rounds
 function playRound(playerSelection, computerSelection) {
   if (playerSelection.toLowerCase() == computerSelection.toLowerCase()) {
     return;
