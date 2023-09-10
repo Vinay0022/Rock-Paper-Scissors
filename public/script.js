@@ -22,7 +22,7 @@ if(player===5 || cpu===5){
             result.textContent = " Player win";
         }else{
             result.textContent = " Cpu win";
-        } 
+        }
     }
 }
 Rock.addEventListener('click',()=>{
@@ -50,7 +50,7 @@ Scissors.addEventListener('click',()=>{
     cpuscore.textContent = `Cpu : ${cpu}`;
     pscore.textContent = `Player : ${player}`;
     Result();
-    
+
 });
 
 
@@ -64,7 +64,7 @@ Scissors.addEventListener('click',()=>{
         //console.log(`The player score is ${player}`);
         //console.log(`The cpu score is ${cpu}`);
         //}
-    //(player>cpu)?console.log("player wins"):console.log("cpu wins");    
+    //(player>cpu)?console.log("player wins"):console.log("cpu wins");
     //}
 
 
