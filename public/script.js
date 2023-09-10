@@ -7,7 +7,7 @@ function getComputerChoice() {
     return arr[i];
 };
 
-const div = document.querySelector('div');
+const div = document.querySelector('.context');
 const pscore= document.querySelector('.pscore');
 const cpuscore= document.querySelector('.cpuscore');
 const result= document.querySelector('.result');
