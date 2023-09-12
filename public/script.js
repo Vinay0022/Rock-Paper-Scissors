@@ -15,16 +15,37 @@ const result= document.querySelector('.result');
 const Rock = document.querySelector('.rock');
 const Paper= document.querySelector('.paper');
 const Scissors= document.querySelector('.sci');
+const playagain = document.querySelector('.playagain')
 
 function Result(){
 if(player===5 || cpu===5){
         if(player>cpu){
             result.textContent = " Player win";
+    displayReset()
         }else{
             result.textContent = " Cpu win";
+    displayReset()
         }
+
     }
 }
+
+function displayReset(){
+    playagain.classList.add("btn")
+    playagain.textContent= "Play Again";
+}
+playagain.addEventListener('click',()=>{
+    player = 0;
+    cpu=0;
+cpuscore.textContent = "";
+pscore.textContent = "";
+    result.textContent="";
+    div.textContent="";
+    playagain.textContent="";
+    playagain.classList.remove("btn")
+})
+
+
 Rock.addEventListener('click',()=>{
 
     let computerSelection = getComputerChoice();
